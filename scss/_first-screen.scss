@@ -1,0 +1,163 @@
+@import "_select";
+
+.first-screen {
+    @include wrapper(1208px);
+    padding-right: 30px;
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 147px;
+    @media (max-width: 884px) {
+        margin-bottom: 70px;
+    }
+    &__photo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -3;
+        max-width: 484px;
+        min-height: 615px;
+        @media (max-width: 884px) {
+            display: none;
+        }
+    }
+}
+
+.first-screen-text {
+    padding-top: 44px;
+    &__heading {
+        max-width: 558px;
+        min-height: 219px;
+        margin-bottom: 30px;
+        @include font-style(61px, 600, 73px, $font-color);
+        @media (max-width: 1056px) {
+            max-width: 350px;
+            min-height: 150px;
+            @include font-style(43px, 600, 52px, $font-color);
+        }
+        @media (max-width: 884px) {
+            max-width: 100%;
+            text-align: center;
+            min-height: 100px;
+        }
+        @media (max-width: 672px) {
+            @include font-style(30px, 600, 36px, $font-color);
+            min-height: 70px;
+        }
+        @media (max-width: 452px) {
+            @include font-style(21px, 600, 26px, $font-color);
+            min-height: 50px;
+        }
+    }
+    &__description {
+        max-width: 558px;
+        min-height: 54px;
+        margin-bottom: 40px;
+        @include font-style(18px, 500, 27px, $font-color);
+        opacity: 0.7;
+        @media (max-width: 1056px) {
+            max-width: 350px;
+            min-height: 38px;
+        }
+        @media (max-width: 884px) {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 452px) {
+            @include font-style(14px, 500, 20px, $font-color);
+        }
+    }
+}
+
+.tabs {
+    font-size: 0;
+    display: table;
+    max-width: 842px;
+    min-height: 181px;
+    >input[type="radio"] {
+        display: none;
+    }
+    >label {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        user-select: none;
+        min-width: 78px;
+        padding: 15px 22px;
+        box-shadow: 0px 10px 75px rgb(0 0 0 / 10%);
+        @include font-style(18px, 500, 27px, $font-color);
+        cursor: pointer;
+        @media (max-width: 884px) {
+            background: #FFFFFF;
+        }
+    }
+    >input[type="radio"]:checked+label {
+        color: $hover-color;
+        font-weight: 600;
+    }
+    #tab-btn-1:checked~#content-1,
+    #tab-btn-2:checked~#content-2,
+    #tab-btn-3:checked~#content-3 {
+        display: block;
+        @media (max-width: 884px) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    @media (max-width: 884px) {
+        padding: 40px;
+        margin: 0 auto;
+        background-image: url("../images/e26760dbdab3d2ec654cf8368898f386.jpg");
+        background-size: cover;
+    }
+    @media (max-width: 452px) {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.tabs-content {
+    display: none;
+    background: #FFFFFF;
+    border-radius: 0 5px 5px 5px;
+    position: relative;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.06);
+    padding: 30px 150px 30px 30px;
+    @media (max-width: 884px) {
+        flex-direction: column;
+        min-width: 400px;
+        min-height: 350px;
+        padding-top: 15px;
+        padding-right: 30px;
+    }
+    @media (max-width: 672px) {
+        min-width: 200px;
+    }
+    &__button {
+        position: absolute;
+        top: calc(50% - 27px);
+        text-align: right;
+        @include buttons(120px, 54px, $btn-big-br);
+        @include font-style(16px, 500, 24px, #FFFFFF);
+        @media (max-width: 884px) {
+            top: 290px;
+        }
+        &::before {
+            position: absolute;
+            top: calc(50% - 10px);
+            left: 20px;
+            content: url("../images/search.svg");
+            margin-right: 10px;
+        }
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+}
+
+    
+
+
+    

@@ -1,0 +1,28 @@
+@mixin wrapper($max-width) {
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@mixin font-style($fs, $fw, $lh, $fc) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $fc;
+}
+
+@mixin buttons($mw, $h, $br) {
+    min-width: $mw;
+    height: $h;
+    color: $btn-font-color;
+    background-color: $btn-bg-color;
+    border-radius: $br;
+    padding-left: 20px;
+    padding-right: 20px;
+}

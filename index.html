@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!--endbuild-->
+    <title>Document</title>
+</head>
+<body>
+    
+        <header class="header">
+            <a href="#">
+                <img src="images/logo.png" alt="Company logo" class="header__logo">
+            </a>
+            <div class="header-menu">
+                <a href="#" class="header-menu__link">Home</a>
+                <a href="#properties" class="header-menu__link">Properties</a>
+                <a href="#" class="header-menu__link">About us</a>
+                <a href="#" class="header-menu__link">Blog</a>
+                <button type="submit" class="header-menu__button">Contact us</button>
+            </div>
+        </header>
+        <main>
+            <div class="first-screen">
+                <div class="first-screen-text">
+                    <h1 class="first-screen-text__heading">Find the perfect place to stay with your family</h1>
+                    <span class="first-screen-text__description">Buying a home is a life-changing experience, so shouldn’t your real estate agent be a life changer.</span>
+                </div>
+                <div class="tabs">
+                    <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                    <label for="tab-btn-1">Buy</label>
+                    <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                    <label for="tab-btn-2">Rent</label>
+                    <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+                    <label for="tab-btn-3">Sell</label>
+                    <div class="tabs-content" id="content-1">
+                        <!--part for stylish selects (start)-->
+                        <div class="selectLocation">
+                            <div class="selectWrapper">
+                                <div class="selectCustom js-selectLocationBuy" aria-hidden="true">
+                                    <span class="selectLabelLocation">Location</span>
+                                    <div class="selectCustom-options">
+                                        <div class="selectCustom-option" data-value="DH">Dhaka</div>
+                                        <div class="selectCustom-option" data-value="EL">East London</div>
+                                    </div>
+                                    <div class="selectCustom-trigger">Dhaka</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectProperty">
+                            <div class="selectWrapper">
+                                <div class="selectCustom js-selectPropertyBuy" aria-hidden="true">
+                                    <span class="selectLabelProperty">Property type</span>
+                                    <div class="selectCustom-options">
+                                        <div class="selectCustom-option" data-value="DU">Duplex</div>
+                                        <div class="selectCustom-option" data-value="TH">Townhouse</div>
+                                    </div>
+                                    <div class="selectCustom-trigger">Duplex</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectPrice">
+                            <div class="selectWrapper">
+                                <div class="selectCustom js-selectPriceBuy" aria-hidden="true">
+                                    <span class="selectLabelPrice">Price</span>
+                                    <div class="selectCustom-options">
+                                        <div class="selectCustom-option" data-value="48">$4000-$8000</div>
+                                        <div class="selectCustom-option" data-value="23">$2000-$3000</div>
+                                    </div>
+                                    <div class="selectCustom-trigger">$4000-$8000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#properties">
+                            <button type="submit" class="tabs-content__button">Search</button>
+                        </a>
+                    </div>
+                    <div class="tabs-content" id="content-2">
+                        <div class="selectLocation">
+                            <div class="selectWrapper">
+                                <div class="selectCustom js-selectLocationRent" aria-hidden="true">
+                                    <span class="selectLabelLocation">Location</span>
+                                    <div class="selectCustom-options">
+                                        <div class="selectCustom-option" data-value="DH">Dhaka</div>
+                                        <div class="selectCustom-option" data-value="EL">East London</div>
+                                    </div>
+                                    <div class="selectCustom-trigger">Dhaka</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectProperty">
+                            <div class="selectWrapper">
+                                <div class="selectCustom js-selectPropertyRent" aria-hidden="true">
+                                    <span class="selectLabelProperty">Property type</span>
+                                    <div class="selectCustom-options">
+                                        <div class="selectCustom-option" data-value="DU">Duplex</div>
+                                        <div class="selectCustom-option" data-value="TH">Townhouse</div>
+                                    </div>
+                                    <div class="selectCustom-trigger">Duplex</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectPrice">
+                            <div class="selectWrapper">
+                                <div class="selectCustom js-selectPriceRent" aria-hidden="true">
+                                    <span class="selectLabelPrice">Price</span>
+                                    <div class="selectCustom-options">
+                                        <div class="selectCustom-option" data-value="48">$4000-$8000</div>
+                                        <div class="selectCustom-option" data-value="23">$2000-$3000</div>
+                                    </div>
+                                    <div class="selectCustom-trigger">$4000-$8000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#properties">
+                            <button type="submit" class="tabs-content__button">Search</button>
+                        </a>
+                    </div>
+                    <div class="tabs-content" id="content-3">
+                        <div class="selectLocation">
+                            <div class="selectWrapper">
+                                <div class="selectCustom js-selectLocationSell" aria-hidden="true">
+                                    <span class="selectLabelLocation">Location</span>
+                                    <div class="selectCustom-options">
+                                        <div class="selectCustom-option" data-value="DH">Dhaka</div>
+                                        <div class="selectCustom-option" data-value="EL">East London</div>
+                                    </div>
+                                    <div class="selectCustom-trigger">Dhaka</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectProperty">
+                            <div class="selectWrapper">
+                                <div class="selectCustom js-selectPropertySell" aria-hidden="true">
+                                    <span class="selectLabelProperty">Property type</span>
+                                    <div class="selectCustom-options">
+                                        <div class="selectCustom-option" data-value="DU">Duplex</div>
+                                        <div class="selectCustom-option" data-value="TH">Townhouse</div>
+                                    </div>
+                                    <div class="selectCustom-trigger">Duplex</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectPrice">
+                            <div class="selectWrapper">
+                                <div class="selectCustom js-selectPriceSell" aria-hidden="true">
+                                    <span class="selectLabelPrice">Price</span>
+                                    <div class="selectCustom-options">
+                                        <div class="selectCustom-option" data-value="48">$4000-$8000</div>
+                                        <div class="selectCustom-option" data-value="23">$2000-$3000</div>
+                                    </div>
+                                    <div class="selectCustom-trigger">$4000-$8000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#properties">
+                            <button type="submit" class="tabs-content__button">Search</button>
+                        </a>
+                    </div>
+                    <!--part for stylish selects (end)-->
+                </div>
+                <div class="first-screen__photo">
+                    <img srcset="images/image1.jpg 484w, images/image2.jpg 242w" sizes="(max-width:884px) 363px, 484px" alt="Find the perfect place to stay with your family">
+                </div>
+            </div>
+
+            <div class="partners">
+                <h2 class="partners-heading">Our Partners</h2>
+                <div class="partners-logos">
+                    <a href="" class="partners-logos__item">
+                        <img src="images/partner1.png" alt="Biotech development">
+                    </a>
+                    <a href=""  class="partners-logos__item">
+                        <img src="images/partner2.png" alt="Express">
+                    </a>
+                    <a href="" class="partners-logos__item">
+                        <img src="images/partner3.png" alt="Smilehome">
+                    </a>
+                    <a href="" class="partners-logos__item">
+                        <img src="images/partner4.png" alt="Connect">
+                    </a>
+                    <a href="" class="partners-logos__item">
+                        <img src="images/partner5.png" alt="Homebuild">
+                    </a>
+                </div>
+            </div>
+
+            <div class="properties" id="properties">
+                <div class="properties-header">
+                    <h2 class="properties-header__text">Popular Properties</h2>
+                    <a href="#" class="properties-header__link">VIEW ALL</a>
+                </div>
+                <div class="properties-cards">
+                    
+                        <div class="cards-item">
+                            <div class="cards-item__photo">
+                                <img src="images/property1.jpg" alt="Capital hill residence">
+                            </div>
+                            <div class="cards-item__description">
+                                <div class="description-heading">
+                                    <h3 class="description-heading__text">Capital hill residence</h3>
+                                    <button class="description-heading__heart" type="button"></button>
+                                </div>
+                                <span class="description-location">East London</span>
+                                <div class="description-comfort">
+                                    <span class="description-comfort__sleeper">6</span>
+                                    <span class="description-comfort__kitchen">2</span>
+                                    <span class="description-comfort__shower">3</span>
+                                </div>
+                                <div class="description-price">
+                                    <span class="description-price__item">$5527.00</span>
+                                    <button class="description-price__button">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="cards-item">
+                            <div class="cards-item__photo">
+                                <img src="images/property2.jpg" alt="Picket Fence Realty">
+                            </div>
+                            <div class="cards-item__description">
+                                <div class="description-heading">
+                                    <h3 class="description-heading__text">Picket Fence Realty</h3>
+                                    <button class="description-heading__heart" type="button"></button>
+                                </div>
+                                <span class="description-location">East London</span>
+                                <div class="description-comfort">
+                                    <span class="description-comfort__sleeper">6</span>
+                                    <span class="description-comfort__kitchen">2</span>
+                                    <span class="description-comfort__shower">3</span>
+                                </div>
+                                <div class="description-price">
+                                    <span class="description-price__item">$6727.00</span>
+                                    <button class="description-price__button">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="cards-item">
+                            <div class="cards-item__photo">
+                                <img src="images/property3.jpg" alt="Banyon Tree Realty">
+                            </div>
+                            <div class="cards-item__description">
+                                <div class="description-heading">
+                                    <h3 class="description-heading__text">Banyon Tree Realty</h3>
+                                    <button class="description-heading__heart" type="button"></button>
+                                </div>
+                                <span class="description-location">East London</span>
+                                <div class="description-comfort">
+                                    <span class="description-comfort__sleeper">6</span>
+                                    <span class="description-comfort__kitchen">2</span>
+                                    <span class="description-comfort__shower">3</span>
+                                </div>
+                                <div class="description-price">
+                                    <span class="description-price__item">$4327.00</span>
+                                    <button class="description-price__button">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="cards-item">
+                            <div class="cards-item__photo">
+                                <img src="images/property4.jpg" alt="Corsair Real Estate">
+                            </div>
+                            <div class="cards-item__description">
+                                <div class="description-heading">
+                                    <h3 class="description-heading__text">Corsair Real Estate</h3>
+                                    <button class="description-heading__heart" type="button"></button>
+                                </div>
+                                <span class="description-location">East London</span>
+                                <div class="description-comfort">
+                                    <span class="description-comfort__sleeper">6</span>
+                                    <span class="description-comfort__kitchen">2</span>
+                                    <span class="description-comfort__shower">3</span>
+                                </div>
+                                <div class="description-price">
+                                    <span class="description-price__item">$4427.00</span>
+                                    <button class="description-price__button">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                   
+                        <div class="cards-item">
+                            <div class="cards-item__photo">
+                                <img src="images/property5.jpg" alt="Sequoia Real Estate">
+                            </div>
+                            <div class="cards-item__description">
+                                <div class="description-heading">
+                                    <h3 class="description-heading__text">Sequoia Real Estate</h3>
+                                    <button class="description-heading__heart" type="button"></button>
+                                </div>
+                                <span class="description-location">East London</span>
+                                <div class="description-comfort">
+                                    <span class="description-comfort__sleeper">6</span>
+                                    <span class="description-comfort__kitchen">2</span>
+                                    <span class="description-comfort__shower">3</span>
+                                </div>
+                                <div class="description-price">
+                                    <span class="description-price__item">$4527.00</span>
+                                    <button class="description-price__button">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                   
+                        <div class="cards-item">
+                            <div class="cards-item__photo">
+                                <img src="images/property6.jpg" alt="Strive Partners Realty">
+                            </div>
+                            <div class="cards-item__description">
+                                <div class="description-heading">
+                                    <h3 class="description-heading__text">Strive Partners Realty</h3>
+                                    <button class="description-heading__heart" type="button"></button>
+                                </div>
+                                <span class="description-location">East London</span>
+                                <div class="description-comfort">
+                                    <span class="description-comfort__sleeper">6</span>
+                                    <span class="description-comfort__kitchen">2</span>
+                                    <span class="description-comfort__shower">3</span>
+                                </div>
+                                <div class="description-price">
+                                    <span class="description-price__item">$5527.00</span>
+                                    <button class="description-price__button">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+
+            <div class="featured">
+                <div class="featured-wrapper">
+                    <h2 class="featured-heading">Property Featured</h2>
+                    <span class="featured-description">Real estate is a crowded field. But with the number of buyers purchasing homes through real estate agents and brokers growing there’s plenty of </span>
+                    <div class="featured-content">
+                        <div class="featured-content-left">
+                            <div class="featured-item">
+                                <img src="images/features1.svg" alt="100% Security" class="featured-item__icon">
+                                <h3 class="featured-item__heading">100% Security</h3>
+                                <span class="featured-item__description">For many of us, buying a home is a dre and one not easily attainable. </span>
+                            </div>
+                            <div class="featured-item">
+                                <img src="images/features2.svg" alt="Free air conditioner" class="featured-item__icon">
+                                <h3 class="featured-item__heading">Free air conditioner</h3>
+                                <span class="featured-item__description">For many of us, buying a home is a dre and one not easily attainable. </span>
+                            </div>
+                            <div class="featured-item">
+                                <img src="images/features3.svg" alt="Flower garden" class="featured-item__icon">
+                                <h3 class="featured-item__heading">Flower garden</h3>
+                                <span class="featured-item__description">For many of us, buying a home is a dre and one not easily attainable. </span>
+                            </div>
+                        </div>
+                        <div class="featured-content-center">
+                            <img src="images/features-image.jpg" alt="Property Featured">
+                        </div>
+                        <div class="featured-content-right">
+                            <div class="featured-item">
+                                <img src="images/features4.svg" alt="Parkers & movers" class="featured-item__icon">
+                                <h3 class="featured-item__heading">Parkers & movers</h3>
+                                <span class="featured-item__description">For many of us, buying a home is a dre and one not easily attainable. </span>
+                            </div>
+                            <div class="featured-item">
+                                <img src="images/features5.svg" alt="Rental furniture" class="featured-item__icon">
+                                <h3 class="featured-item__heading">Rental furniture</h3>
+                                <span class="featured-item__description">For many of us, buying a home is a dre and one not easily attainable. </span>
+                            </div>
+                            <div class="featured-item">
+                                <img src="images/features6.svg" alt="Swimming pool" class="featured-item__icon">
+                                <h3 class="featured-item__heading">Swimming pool</h3>
+                                <span class="featured-item__description">For many of us, buying a home is a dre and one not easily attainable. </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews">
+                <h2 class="reviews-heading">Reviews</h2>
+                <span class="reviews-description">Our valuable customer says</span>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="swiper-slide-item">
+                            <div class="swiper-item-header">
+                                <div class="swiper-item-people">
+                                    <img src="images/swiper1.png" alt="Justin Lee" class="swiper-item-people__photo">
+                                    <div>
+                                        <span class="swiper-item-people__name">Justin Lee</span>
+                                        <span class="swiper-item-people__position">Products Designer at Ito</span>
+                                    </div>
+                                </div>
+                                <img src="images/quote.svg" alt="quote" class="swiper-item-header__quote">
+                            </div>
+                            <p class="swiper-item-description">A good real estate agent doesn’t disappear once the closing IN signed.Buying a bigger home doesn’t necessarily mean spendi more money.Been there. Done that. Sold. Bought Bringing It All Together.</p>
+                        </div> 
+                        <div class="swiper-slide-item">
+                            <div class="swiper-item-header">
+                                <div class="swiper-item-people">
+                                    <img src="images/swiper2.png" alt="Angel Cathe" class="swiper-item-people__photo">
+                                    <div>
+                                        <span class="swiper-item-people__name">Angel Cathe</span>
+                                        <span class="swiper-item-people__position">Products Designer at Ito</span>
+                                    </div>
+                                </div>
+                                <img src="images/quote.svg" alt="quote" class="swiper-item-header__quote">
+                            </div>
+                            <p class="swiper-item-description">A good real estate agent doesn’t disappear once the closing IN signed.Buying a bigger home doesn’t necessarily mean spendi more money.Been there. Done that. Sold. Bought Bringing It All Together.</p>
+                        </div> 
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-slide-item">
+                            <div class="swiper-item-header">
+                                <div class="swiper-item-people">
+                                    <img src="images/swiper1.png" alt="Justin Lee" class="swiper-item-people__photo">
+                                    <div>
+                                        <span class="swiper-item-people__name">Justin Lee</span>
+                                        <span class="swiper-item-people__position">Products Designer at Ito</span>
+                                    </div>
+                                </div>
+                                <img src="images/quote.svg" alt="quote" class="swiper-item-header__quote">
+                            </div>
+                            <p class="swiper-item-description">A good real estate agent doesn’t disappear once the closing IN signed.Buying a bigger home doesn’t necessarily mean spendi more money.Been there. Done that. Sold. Bought Bringing It All Together.</p>
+                        </div> 
+                        <div class="swiper-slide-item">
+                            <div class="swiper-item-header">
+                                <div class="swiper-item-people">
+                                    <img src="images/swiper2.png" alt="Angel Cathe" class="swiper-item-people__photo">
+                                    <div>
+                                        <span class="swiper-item-people__name">Angel Cathe</span>
+                                        <span class="swiper-item-people__position">Products Designer at Ito</span>
+                                    </div>
+                                </div>
+                                <img src="images/quote.svg" alt="quote" class="swiper-item-header__quote">
+                            </div>
+                            <p class="swiper-item-description">A good real estate agent doesn’t disappear once the closing IN signed.Buying a bigger home doesn’t necessarily mean spendi more money.Been there. Done that. Sold. Bought Bringing It All Together.</p>
+                        </div> 
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-slide-item">
+                            <div class="swiper-item-header">
+                                <div class="swiper-item-people">
+                                    <img src="images/swiper1.png" alt="Justin Lee" class="swiper-item-people__photo">
+                                    <div>
+                                        <span class="swiper-item-people__name">Justin Lee</span>
+                                        <span class="swiper-item-people__position">Products Designer at Ito</span>
+                                    </div>
+                                </div>
+                                <img src="images/quote.svg" alt="quote" class="swiper-item-header__quote">
+                            </div>
+                            <p class="swiper-item-description">A good real estate agent doesn’t disappear once the closing IN signed.Buying a bigger home doesn’t necessarily mean spendi more money.Been there. Done that. Sold. Bought Bringing It All Together.</p>
+                        </div> 
+                        <div class="swiper-slide-item">
+                            <div class="swiper-item-header">
+                                <div class="swiper-item-people">
+                                    <img src="images/swiper2.png" alt="Angel Cathe" class="swiper-item-people__photo">
+                                    <div>
+                                        <span class="swiper-item-people__name">Angel Cathe</span>
+                                        <span class="swiper-item-people__position">Products Designer at Ito</span>
+                                    </div>
+                                </div>
+                                <img src="images/quote.svg" alt="quote" class="swiper-item-header__quote">
+                            </div>
+                            <p class="swiper-item-description">A good real estate agent doesn’t disappear once the closing IN signed.Buying a bigger home doesn’t necessarily mean spendi more money.Been there. Done that. Sold. Bought Bringing It All Together.</p>
+                        </div> 
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-slide-item">
+                            <div class="swiper-item-header">
+                                <div class="swiper-item-people">
+                                    <img src="images/swiper1.png" alt="Justin Lee" class="swiper-item-people__photo">
+                                    <div>
+                                        <span class="swiper-item-people__name">Justin Lee</span>
+                                        <span class="swiper-item-people__position">Products Designer at Ito</span>
+                                    </div>
+                                </div>
+                                <img src="images/quote.svg" alt="quote" class="swiper-item-header__quote">
+                            </div>
+                            <p class="swiper-item-description">A good real estate agent doesn’t disappear once the closing IN signed.Buying a bigger home doesn’t necessarily mean spendi more money.Been there. Done that. Sold. Bought Bringing It All Together.</p>
+                        </div> 
+                        <div class="swiper-slide-item">
+                            <div class="swiper-item-header">
+                                <div class="swiper-item-people">
+                                    <img src="images/swiper2.png" alt="Angel Cathe" class="swiper-item-people__photo">
+                                    <div>
+                                        <span class="swiper-item-people__name">Angel Cathe</span>
+                                        <span class="swiper-item-people__position">Products Designer at Ito</span>
+                                    </div>
+                                </div>
+                                <img src="images/quote.svg" alt="quote" class="swiper-item-header__quote">
+                            </div>
+                            <p class="swiper-item-description">A good real estate agent doesn’t disappear once the closing IN signed.Buying a bigger home doesn’t necessarily mean spendi more money.Been there. Done that. Sold. Bought Bringing It All Together.</p>
+                        </div> 
+                      </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </div>
+            <div class="subscribe">
+                <h2 class="subscribe-heading">Get listed your home as  a owner</h2>
+                <span class="subscribe-description">Here is a list of the greatest real estate company slogans of all-time. These catchy slogans are followed by the Greatest Real Estate.</span>
+                <form class="subscribe-form">
+                    <input type="email" class="subscribe-form__input" placeholder="Enter email address">
+                    <button class="subscribe-form__button" type="submit">Subscribe</button>   
+                </form>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-social">
+                <a href="#">
+                    <img src="images/logo-footer.png" alt="RubyHome Logo" class="footer-social__logo">
+                </a>
+                <span class="footer-social__text">Contrary to popular  is not simply random text. It has </span>
+                <div class="footer-social-icons">
+                    <a href="http://facebook.com">
+                        <img src="images/facebook.svg" alt="Facebook" class="footer-social-icons__item">
+                    </a>
+                    <a href="http://instagram.com">
+                        <img src="images/instagram.svg" alt="Instagram" class="footer-social-icons__item">
+                    </a>
+                    <a href="http://twitter.com">
+                        <img src="images/twitter.svg" alt="Twitter" class="footer-social-icons__item">
+                    </a>
+                    <a href="http://youtube.com">
+                        <img src="images/youtube.svg" alt="YouTube" class="footer-social-icons__item">
+                    </a>
+                    <a href="http://linkedin.com">
+                        <img src="images/linkedin.svg" alt="LinkedIn" class="footer-social-icons__item">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-menu">
+                <div class="footer-menu-item">
+                    <span class="footer-menu-item__heading">About</span>
+                    <ul class="footer-menu-item-list">
+                        <li class="footer-menu-item-list__link">
+                            <a href="#">Company</a>
+                        </li>
+                        <li class="footer-menu-item-list__link">
+                            <a href="#">Team</a>
+                        </li>
+                        <li class="footer-menu-item-list__link">
+                            <a href="#">Career</a>
+                        </li>
+                        <li class="footer-menu-item-list__link">
+                            <a href="#">Blogs</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-menu-item">
+                    <span class="footer-menu-item__heading">Products</span>
+                    <ul class="footer-menu-item-list">
+                        <li class="footer-menu-item-list__link">
+                            <a href="#">E-books</a>
+                        </li>
+                        <li class="footer-menu-item-list__link">
+                            <a href="#">Preasantation</a>
+                        </li>
+                        <li class="footer-menu-item-list__link">
+                            <a href="#">Management</a>
+                        </li>
+                        <li class="footer-menu-item-list__link">
+                            <a href="#">Dashboard</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-menu-item">
+                    <span class="footer-menu-item__heading">Address</span>
+                    <ul class="footer-menu-item-list">
+                        <li class="footer-menu-item-list__link">
+                            <a href="#">Country Delevery</a>
+                        </li>
+                        <li class="footer-menu-item-list__link">
+                            <a href="#">Counter Beach Post</a>
+                        </li>
+                        <li class="footer-menu-item-list__link">
+                            <a href="#">www.itobd.com</a>
+                        </li>
+                        <li class="footer-menu-item-list__link">
+                            <a href="tel:+880176565655">+880176565655</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    <!--build:js js/main.min.js -->
+    <script src="js/lib/select.js"></script>
+    <script src="js/lib/swiper-bundle.min.js"></script>
+    <script src="js/lib/swiper.js"></script>
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

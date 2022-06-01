@@ -1,0 +1,41 @@
+.header {
+    @include wrapper(1208px);
+    padding-right: 30px;
+    padding-left: 30px;
+    @include flex;
+    padding-top: 35px;
+    margin-bottom: 35px;
+    @media (max-width: 884px) {
+        flex-direction: column;
+    }
+    &__logo {
+        @media (max-width: 1056px) {
+            width: 175px;
+        }
+        @media (max-width: 672px) {
+            margin-bottom: 20px;
+        }
+    }
+}
+.header-menu {
+    @include flex;
+    @include font-style(16px, 500, 24px, $font-color);
+    min-width: 588px;
+    min-height: 54px;
+    @media (max-width: 672px) {
+        flex-direction: column;
+        min-width: 250px;
+    }
+    &__link {
+        opacity: 0.7;
+        &:hover {
+            color: $hover-color;
+        }
+    }
+    &__button {
+        @include buttons(149px, 54px, $btn-small-br);
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+}

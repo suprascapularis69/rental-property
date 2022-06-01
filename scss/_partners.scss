@@ -1,0 +1,53 @@
+.partners {
+    @include wrapper(1208px);
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 140px;
+    @media (max-width: 672px) {
+        margin-bottom: 70px;
+    }
+}
+
+.partners-heading {
+    position: relative;
+    max-width: 282px;
+    @include font-style(44px, 600, 66px, $font-color);
+    text-align: center;
+    margin: 0 auto 66px auto;
+    @media (max-width: 672px) {
+        @include font-style(30px, 600, 36px, $font-color);
+        margin-bottom: 33px;
+    }
+    @media (max-width: 452px) {
+        @include font-style(21px, 600, 26px, $font-color);
+    }
+    &::before {
+        content: url("../images/Grou.svg");
+        position: absolute;
+        top: -3px;
+        left: -6px;
+        @media (max-width: 672px) {
+            display: none;
+        }
+    }
+}
+
+.partners-logos {
+    @include flex;
+    &__item {
+        border: 1px solid transparent;
+        border-radius: 10px;
+        padding: 10px;
+        &:hover {
+            border-color: $hover-color;
+        }
+    }
+    @media (max-width: 884px) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    @media (max-width: 672px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,190 @@
+
+.selectWrapper {
+  position: relative;
+  @media (max-width: 884px) {
+    margin-bottom: 10px;
+  }
+}
+
+.selectCustom {
+  position: relative;
+  min-width: 132px;
+  height: 33px;
+  &.isActive .selectCustom-options {
+    display: block;
+  }
+}
+
+.selectCustom-trigger {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  @include font-style(22px, 500, 33px, $font-color);
+  border: 0;
+  border-radius: 0.4rem;
+  &:hover {
+    border-color: #8c00ff;
+  }
+}
+
+.selectCustom-options {
+  position: absolute;
+  top: calc(3.8rem + 0.8rem);
+  left: 0;
+  width: 100%;
+  border: 1px solid #6f6f6f;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  box-shadow: 0 0 4px #e9e1f8;
+  z-index: 1;
+  padding: 0.8rem 0;
+  display: none;
+}
+
+.selectCustom-option {
+  position: relative;
+  padding: 0.8rem;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    background-color: $hover-color;
+  }
+  &:not(:last-of-type)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0.8rem;
+    width: calc(100% - 1.6rem);
+    border-bottom: 1px solid #d3d3d3;
+  }
+}
+
+
+.selectLocation {
+  display: inline-block;
+  position: relative;
+  min-width: 138px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 0px;
+    top: 35px;
+    left: 119px;
+    opacity: 0.1;
+    border: 1px solid #030A1B;
+    transform: rotate(90deg);
+    z-index: 3;
+    @media (max-width: 884px) {
+      display: none;
+    }
+  }
+}
+
+.selectLabelLocation {
+  cursor: pointer;
+  position: relative;
+  min-width: 132px;
+  height: 24px;
+  @include font-style(16px, 400, 24px, $font-color);
+  opacity: 0.7;
+  margin-bottom: 10px;
+  @media (max-width: 884px) {
+    max-width: 132px;
+  }
+  &::after {
+    content: url("../images/Vector.svg");
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    @media (max-width: 884px) {
+      right: 45px;
+    }
+  }
+}
+    
+.selectProperty {
+  display: inline-block;
+  position: relative;
+  min-width: 174px;
+  padding-left: 67px;
+  @media (max-width: 1056px) {
+    padding-left: 31px;
+  }
+  @media (max-width: 884px) {
+    padding-left: 0;
+    max-width: 174px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 0px;
+    top: 35px;
+    left: 222px;
+    opacity: 0.1;
+    border: 1px solid #030A1B;
+    transform: rotate(90deg);
+    z-index: 3;
+    @media (max-width: 1056px) {
+      left: 186px;
+    }
+    @media (max-width: 884px) {
+      display: none;
+    }
+  }
+}
+
+.selectLabelProperty {
+  cursor: pointer;
+  position: relative;
+  min-width: 174px;
+  height: 24px;
+  @include font-style(16px, 400, 24px, $font-color);
+  opacity: 0.7;
+  margin-bottom: 10px;
+  &::after {
+    content: url("../images/Vector.svg");
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    @media (max-width: 884px) {
+      right: 50px;
+    }
+  }
+}
+    
+.selectPrice {
+  display: inline-block;
+  min-width: 155px;
+  padding-left: 67px;
+  margin-right: 58px;
+  @media (max-width: 1056px) {
+    padding-left: 31px;
+  }
+  @media (max-width: 884px) {
+    padding-left: 0;
+    max-width: 155px;
+    margin-right: 0;
+  }
+}
+
+.selectLabelPrice {
+  cursor: pointer;
+  position: relative;
+  min-width: 155px;
+  height: 24px;
+  @include font-style(16px, 400, 24px, $font-color);
+  opacity: 0.7;
+  margin-bottom: 10px;
+  &::after {
+    content: url("../images/Vector.svg");
+    position: absolute;
+    top: 0px;
+    right: 98px;
+    @media (max-width: 884px) {
+      right: 100px;
+    }
+  }
+}
+    

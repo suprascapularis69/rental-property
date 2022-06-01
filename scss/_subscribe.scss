@@ -1,0 +1,95 @@
+.subscribe {
+    @include wrapper(1148px);
+    padding: 70px 0;
+    background: #433E89;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 140px;
+    @media (max-width: 884px) {
+        padding: 70px 20px;
+    }
+    @media (max-width: 672px) {
+        margin-bottom: 70px;
+    }
+    @media (max-width: 452px) {
+        padding: 30px 30px;
+    }
+    &::before {
+        content: url("../images/Ellipse1.svg");
+        position: absolute;
+        top: 330px;
+        right: 16px;
+    }
+    &::after {
+        content: url("../images/Ellipse2.svg");
+        position: absolute;
+        top: 24px;
+        left: -107px;
+    }
+}
+
+.subscribe-heading {
+    @include font-style(44px, 500, 60px, #FFFFFF);
+    text-align: center;
+    margin-bottom: 15px;
+    @media (max-width: 672px) {
+        @include font-style(30px, 500, 36px, #FFFFFF);
+    }
+    @media (max-width: 452px) {
+        @include font-style(21px, 600, 26px, #FFFFFF);
+    }
+}
+.subscribe-description {
+    @include font-style(16px, 400, 24px, #FFFFFF);
+    text-align: center;
+    opacity: 0.7;
+    max-width: 635px;
+    min-height: 48px;
+    margin: 0 auto 70px auto;
+    @media (max-width: 452px) {
+        @include font-style(14px, 400, 18px, #FFFFFF);;
+    }
+}
+
+.subscribe-form {
+    @include flex;
+    max-width: 743px;
+    min-height: 70px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 7px 7px 7px 30px;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    @media (max-width: 452px) {
+        padding: 7px;
+        flex-direction: column;
+    }
+    &__input {
+        min-width: 300px;
+        outline: none;
+        @media (max-width: 672px) {
+            min-width: 150px;
+        }
+        @media (max-width: 672px) {
+            min-height: 50px;
+        }
+        &::placeholder {
+            @include font-style(16px, 400, 24px, $font-color);
+            opacity: 0.5;
+            @media (max-width: 452px) {
+                text-align: center;
+            }
+        }
+    }
+    &__button {
+        @include buttons(162px, 56px, $btn-big-br);
+        @include font-style(16px, 500, 24px, #FFFFFF);
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+    &:hover {
+        border-color: $hover-color;
+    }
+}
+    

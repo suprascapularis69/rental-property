@@ -1,0 +1,159 @@
+.properties {
+    @include wrapper(1208px);
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 140px;
+    @media (max-width: 672px) {
+        margin-bottom: 70px;
+    }
+    @media (max-width: 452px) {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+.properties-header {
+    @include flex;
+    min-height: 66px;
+    margin-bottom: 70px;
+    @media (max-width: 672px) {
+        margin-bottom: 35px;
+    }
+    @media (max-width: 452px) {
+        flex-direction: column;
+    }
+    &__text {
+        position: relative;
+        padding-left: 8px;
+        @include font-style(44px, 600, 66px, $font-color);
+        @media (max-width: 672px) {
+            @include font-style(30px, 600, 36px, $font-color);
+        }
+        @media (max-width: 452px) {
+            @include font-style(21px, 600, 26px, $font-color);
+        }
+        &::before {
+            content: url("../images/Grou.svg");
+            position: absolute;
+            top: -4px;
+            left: -7px;
+            @media (max-width: 672px) {
+                display: none;
+            }
+        }
+    }
+    &__link {
+        @include font-style(16px, 600, 24px, $font-color);
+        @media (max-width: 452px) {
+            @include font-style(12px, 600, 20px, $font-color);
+        }
+        &:hover {
+            color: $hover-color;
+        }
+    }
+}
+
+.properties-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 362px);
+    grid-gap: 30px;
+    justify-content: center;
+    justify-items: center;
+    @media (max-width: 452px) {
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+}
+
+.cards-item {
+    max-width: 362px;
+    min-height: 553px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 8px 70px rgba(0, 0, 0, 0.07);
+    &__photo {
+        img {
+            max-width: 362px;
+            min-height: 321px;
+            object-fit: cover;
+            border-radius: 10px 10px 0px 0px;
+            @media (max-width: 452px) {
+                max-width: 100%;
+                min-height: 220px;
+            }
+        }
+    }
+    &__description {
+        padding: 30px;
+    }
+}
+
+.description-heading {
+    @include flex;
+    margin-bottom: 10px;
+    &__text {
+        @include font-style(22px, 600, 33px, $font-color);
+    }
+    &__heart {
+        background-image: url("../images/heart.svg");
+        min-width: 16px;
+        min-height: 14px;
+        &.added {
+            background-image: url("../images/heart-added.svg");
+        }
+    }
+}
+
+.description-location {
+    @include font-style(16px, 400, 24px, $font-color);
+    opacity: 0.7;
+    padding-left: 21px;
+    background: url("../images/location.svg") left no-repeat;
+    margin-bottom: 20px;
+    cursor: pointer;
+    &:hover {
+        color: $hover-color;
+    }
+}
+
+.description-comfort {
+    max-width: 126px;
+    margin-bottom: 26px;
+    @include flex;
+    &__sleeper {
+        background: url("../images/comfort1.svg") left no-repeat;
+        @include font-style(14px, 400, 21px, $font-color);
+        opacity: 0.9;
+        padding-left: 20px;
+    }
+    &__kitchen {
+        background: url("../images/comfort2.svg") left no-repeat;
+        @include font-style(14px, 400, 21px, $font-color);
+        opacity: 0.9;
+        padding-left: 20px;
+    }
+    &__shower {
+        background: url("../images/comfort3.svg") left no-repeat;
+        @include font-style(14px, 400, 21px, $font-color);
+        opacity: 0.9;
+        padding-left: 20px;
+    }
+}
+
+.description-price {
+    @include flex;
+    @media (max-width: 452px) {
+        flex-direction: column;
+    }
+    &__item {
+        @include font-style(22px, 600, 33px, $hover-color);
+        @media (max-width: 452px) {
+            margin-bottom: 10px;
+        }
+    }
+    &__button {
+        @include buttons(138px, 44px, $btn-small-br);
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+}
